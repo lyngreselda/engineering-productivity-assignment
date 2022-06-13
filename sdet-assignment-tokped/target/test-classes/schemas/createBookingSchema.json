@@ -1,0 +1,94 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1617473424.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"orderid",
+		"order"
+	],
+	"properties": {
+		"orderid": {
+			"$id": "#root/orderid", 
+			"title": "orderid", 
+			"type": "integer",
+			"default": 0
+		},
+		"order": {
+			"$id": "#root/order", 
+			"title": "order", 
+			"type": "object",
+			"required": [
+				"firstname",
+				"lastname",
+				"totalprice",
+				"depositpaid",
+				"orderdates",
+				"additionalneeds"
+			],
+			"properties": {
+				"firstname": {
+					"$id": "#root/order/firstname", 
+					"title": "Firstname", 
+					"type": "string",
+					"default": "",
+					"pattern": "^.*$"
+				},
+				"lastname": {
+					"$id": "#root/order/lastname", 
+					"title": "Lastname", 
+					"type": "string",
+					"default": "",
+					"pattern": "^.*$"
+				},
+				"totalprice": {
+					"$id": "#root/order/totalprice", 
+					"title": "Totalprice", 
+					"type": "integer",
+					"default": 0
+				},
+				"depositpaid": {
+					"$id": "#root/order/depositpaid", 
+					"title": "Depositpaid", 
+					"type": "boolean",
+					"default": true
+				},
+				"orderdates": {
+					"$id": "#root/order/orderdates", 
+					"title": "orderdates", 
+					"type": "object",
+					"required": [
+						"checkin",
+						"checkout"
+					],
+					"properties": {
+						"checkin": {
+							"$id": "#root/order/orderdates/checkin", 
+							"title": "Checkin", 
+							"type": "string",
+							"default": "",
+							"pattern": "^.*$"
+						},
+						"checkout": {
+							"$id": "#root/order/orderdates/checkout", 
+							"title": "Checkout", 
+							"type": "string",
+							"default": "",
+							"pattern": "^.*$"
+						}
+					}
+				}
+,
+				"additionalneeds": {
+					"$id": "#root/order/additionalneeds", 
+					"title": "Additionalneeds", 
+					"type": "string",
+					"default": "",
+					"pattern": "^.*$"
+				}
+			}
+		}
+
+	}
+}
