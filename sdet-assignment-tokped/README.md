@@ -1,34 +1,25 @@
-# API-Cucumber
+Problem Description: Consider below Order object (Java Model) 
+{
+“order_id”:xxxxxx,
+“order_description”:”sample description”,
+“order_status”:”New”,
+“last_updated_timestamp”:”1642321210439”, //Unix milisec
+“special_order”:false
+}
+The object is serialized as json and sent to /processOrder() API. API returns response as Order object with updated “order_status” and “last_updated_timestamp”.
 
-## **Overview:**
-API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other.  This API framework is developed using REST Assured and Cucumber.  REST Assured is a Java library that provides a domain-specific language (DSL) for writing powerful, maintainable tests for RESTful APIs. Cucumber is an open source library, which supports behavior driven development. To be more precise, Cucumber can be defined as a testing framework, driven by plain English text. It serves as documentation, automated tests, and a development aid – all in one.
-
-For Demo purpose all the test cases are done on [Restful-booker](https://restful-booker.herokuapp.com/apidoc/index.html).
-
-### **Some of the key features of this framework:**
-
-1. It generates Extent report with all the step details. Report will be generated both HTML & PDF file format.
-2. Generates execution logs, with detailed request and response details.
-3. Feature file has examples of reading request details from json and excel file.
-4. This also has an example to validate response body using json schema and java pojo classes.
-5. Test execution can be triggered form command line. 
-6. Easy integration to CI/CD pipeline.
-
-## **Required Setup :**
-
-- [Java](https://www.guru99.com/install-java.html) should be installed and configured.
-- [Maven](https://mkyong.com/maven/how-to-install-maven-in-windows/) should be installed and configured.
-- Download the files from Git repository either as zip file OR using [Git](https://phoenixnap.com/kb/how-to-install-git-windows).
-
-## **Running Test:**
-
-Open the command prompt and navigate to the folder in which pom.xml file is present.
-Run the below Maven command.
-
-    mvn clean test
+Design an automation framework to test/validate the API with possible use cases. The solution should meet the below criteria:
+Solution should be scalable (Should support fast changing product features and requirements and large no of future/current test cases).
+Choose efficient design patterns. Elaborate the choices in a README file.
+Use OOP concepts where you see required.
+Choose the techstack with consideration for Maintainability/Usability/Reporting/Readability.
+Solution should adhere to SOLID principles.
+README file should include the steps to run the tests, the brief description of the approach or any alternative considered and any other dependency.
+What improvements would be needed for the solution  to be platform/OS independent.
 
 
-Once the execution completes report & log will be generated in below folder.
-
-**Report:** 		*target/report*<br>
-**Log:** 		*target/logs*
+Test cases:
+1. Get all order details
+2. Remove order id
+3. Create order id
+4. Update order id
