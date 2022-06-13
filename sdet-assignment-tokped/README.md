@@ -1,6 +1,8 @@
 Problem Description: Consider below Order object (Java Model) 
+
 {
 “order_id”:xxxxxx,
+
 “order_description”:”sample description”,
 “order_status”:”New”,
 “last_updated_timestamp”:”1642321210439”, //Unix milisec
